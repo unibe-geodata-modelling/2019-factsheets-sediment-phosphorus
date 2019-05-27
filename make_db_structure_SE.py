@@ -47,7 +47,23 @@ import sys
 
 # this is the folder, where the database treelike structure is bulit in
 #(in this Folder the subfolders "Frienisberg", "Lobsigen", "Schwanden", "Seedorf", "Suberg" already existed)
+
+####################################################################################################################
+# insert your paths here:
+
+# where should the treelike folder structure start on your device?
 Gebiete = r"E:\David_Remund_Masterarbeit\alle_GE_MA\Gewässereintrag\Sedimenteintrag"
+
+# where did you store the helping script on your device?
+sys.path.insert(0, r'E:\David_Remund_Masterarbeit\alle_GE_MA\scripts_for_GE\geodata_analysis\Hilfsskripts')
+import build_df_from_arcpy_181119 #ignore that python marks that line red!!!
+
+# where did you store the input vector data on your device?
+SE_vec_copied = r"E:\David_Remund_Masterarbeit\alle_GE_MA\SE_vectors_copied"
+
+# where did you store the raster input data on your device?
+SE_rasters = r"E:\David_Remund_Masterarbeit\alle_GE_MA\output_GE"
+####################################################################################################################
 
 ########### tree-branch "Periode"
 
@@ -101,13 +117,6 @@ for geb in os.listdir(Gebiete):
 # in the soil erosion database (which was given) was chosen)
 
 #################################### create folders like Frienisberg_1997_2007/Jahr/1998/Einzel #####################
-
-#script for converting GIS attribute table to pandas dataframe
-sys.path.insert(0, r'E:\David_Remund_Masterarbeit\alle_GE_MA\scripts_for_GE\geodata_analysis\Hilfsskripts')
-import build_df_from_arcpy_181119 #ignore that python marks that line red!!!
-
-#folder that was created through the script "copy_SE_vectors.py" -> for more information, read documentation of copy_SE_vectors.py
-SE_vec_copied = r"E:\David_Remund_Masterarbeit\alle_GE_MA\SE_vectors_copied"
 
 # make a list that consists of paths of SE_vectors_copies-subfolders
 count = 0
@@ -390,9 +399,6 @@ for vec_gb_p in origin_list:
 ########### tree-branch "Parzelle"
 
 #################################### create folders like Frienisberg_1997_2007/Parzelle/Parzelle_01/Einzel #####################
-
-#folder with sediment input rasters of all regions
-SE_rasters = r"E:\David_Remund_Masterarbeit\alle_GE_MA\output_GE"
 
 # make a list that consists of paths of SE_rasters-subfolders
 count = 0
