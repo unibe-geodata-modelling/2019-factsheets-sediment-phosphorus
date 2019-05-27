@@ -44,6 +44,9 @@ arcpy.CheckOutExtension("spatial")
 arcpy.env.overwriteOutput = True
 import sys
 
+#########################################################################################################################
+#insert your input paths here:
+
 # this is the folder, where the database treelike structure is bulit in
 #(in this Folder the subfolders "Frienisberg", "Lobsigen", "Schwanden", "Seedorf", "Suberg" already existed)
 Gebiete = r"E:\David_Remund_Masterarbeit\alle_GE_MA\Gewässereintrag\Sedimenteintrag"
@@ -61,6 +64,7 @@ import build_df_from_arcpy_181119 #ignore that python marks that line red!!!
 
 #folder that was created through the script "copy_SE_vectors.py" -> for more information, read documentation of copy_SE_vectors.py
 SE_vec_copied = r"E:\David_Remund_Masterarbeit\alle_GE_MA\SE_vectors_copied"
+###########################################################################################################################
 
 ######### code until here as to be in the python console to RUN the Subsections of Code successfully ###################
 
