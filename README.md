@@ -48,3 +48,13 @@ This script checks if some strange raster (they always begin with "numpyarraytor
 For a certain region-period object like Frienisberg 1997-2007, this script calculates the total sum [t], the mean annual input [t/ha*a] and makes boxplots as well as timeseries. All the calculated elements are then drawn together on a PDF sheet. The script needs two input paths: a path were the treelike folder structure starts (line 53) and a path that specifies the folder, where all the boxplots, timeseries and spreadsheets are saved (line 226). The pdf-sheet creating was done with the reportlab package.
 
 If you want to adjust this script, it's important to note that the boxplots and timeseries input are lists. The x-axis labeling of the timeseries was typed in manually (format: timestamp), since otherwise minor shifts would have occured in leap years. This process could certainly be improved. But the labeling of the y-axis sould be dynamic for boxplots and timeseries. Still, check the labeling if you adjust this script.
+
+## results
+
+See: sediment_input_overview.pdf
+
+
+
+
+
+
