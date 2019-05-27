@@ -33,7 +33,7 @@
 #               Parzelle_02...
 #       Frienisberg_2007_2017...(same as for Frienisberg_1997_2007)
 
-#Anmerkung: die Meldung "path already exists schliesst nicht aus, dass neue subfolder trotzdem erstellt werden -> nachprüfen)
+#remark: the message "path already exists" might pop up sometimes even though new folders were created -> check this afterwards!
 
 import os
 import xlrd
