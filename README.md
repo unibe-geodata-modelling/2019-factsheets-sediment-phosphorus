@@ -33,38 +33,18 @@ Special attention sould be paid to the following: At the end of the script, one 
 
 *script 2: copy_management_SE.py*
 
-This script copies each sediment input raster to the right branch in the threelike folder structure. Sometimes rasters also had to be summed up prior to copying. The script needs several input paths (line 47-67): path where the treelike folder structure starts, path where the vector files are stored, path were the raster files are stored, path of the helping script, path where the mean annual sediment input is stored (because this was calculated in advance…).
+This script copies each sediment input raster to the right branch in the threelike folder structure. Sometimes rasters also had to be summed up prior to copying (which is done within this script). The script needs several input paths (line 47-67): path where the treelike folder structure starts, path where the vector files are stored, path were the raster files are stored, path of the helping script, path where the mean annual sediment input is stored (because this was calculated in advance…).
 
-Once the input paths are specified, you can run the script without further editing anything if you have the same vector and raster data as I used. If you want to adjust the script, also note that the naming convention of the vector and raster data is important as well as the naming of the attribute table columns as well as their formats. The summing up of the rasters in my case was relatively easy, since all rasters e.g. in Frienisberg 1997-2007 had the same X-Y-extent! The X-Y extent of all summed up rasters has to be the same, otherwise the programmed approach in this script won't works.
+Once the input paths are specified, you can run the script without further editing anything if you have the same vector and raster data as I used. If you want to adjust the script, also note that the naming convention of the vector and raster data is important as well as the naming of the attribute table columns as well as their formats. The summing up of the rasters in my case was relatively easy, since all rasters e.g. in Frienisberg 1997-2007 had the same X-Y-extent! The X-Y extent of all summed up rasters has to be the same, otherwise my programmed approach in this script won't work for you.
 
-Special attention sould be paid to the following: Convert the rasters to numpy arrays and then sum up the rasters! In this way, the execution of the script is much quicker. At the end, don't forget to convert the numpy array back to a raster and set the output coordinate system. In the developing stage of this script, it did not always work properly. To note such errors during the copying process, cotrol is very crucial. After I copied some files to a new branch in the treelike folder structure, I always checked if the sum of all rasters in e.g. Frienisberg 1997-2007 is still the same as before (see table 1). The scripts were not uploaded on Github but can be easily deduced out of script 2.
+Special attention sould be paid to the following: Like in script 1, ignore the exclamation mark that is due to the import of the helping script! Convert the rasters to numpy arrays and then sum up the rasters! In this way, the execution of the script is much quicker. At the end, don't forget to convert the numpy array back to a raster and set the output coordinate system. In the developing stage of this script, it did not always work properly. To note such errors during the copying process, control numbers are very crucial (otherwise you drift more and more apart from reality). After I copied some files to a new branch in the treelike folder structure, I always checked if the sum of all rasters in e.g. Frienisberg 1997-2007 is still the same as before (e.g. for Frienisberg_97_07	the sum had to be 200.90 tons before and after the copying process). The control scripts were not uploaded on Github but can be easily deduced out of script 2. Some strange additional rasters were also procuced (very rarely) during the copying process (probably temporary storage files...). With this problem is dealt in script 3.
 
-Table 1: control table to be sure that the copying worked
+*script 3: check_strange_rasters.py*
 
-region-period object:	Sum [t]:
-Frienisberg_97_07	    200.90
-Frienisberg_07_17	    42.16
-Lobsigen_97_07	      43.66
-Lobsigen_07_17	      4.01
-Schwanden_97_07	      61.97
-Schwanden_07_17	      7.05
-Seedorf_97_07	        4.66
-Seedorf_07_17	        2.67
-Suberg_97_07	        122.00
-Suberg_07_17	        29.93
+This script checks if some strange raster (they always begin with "numpyarraytorater...") were produced during the copying process. If so, it deletes them and prints the name of the raster that has been deleted. This script only needs one input path: the path where the treelike folder structure starts.
 
+*script 4: create_pdf_spreadsheet_SE.py*
 
+For a certain region-period object like Frienisberg 1997-2007, this script calculates the total sum [t], the mean annual input [t/ha*a] and makes boxplots as well as timeseries. All the calculated elements are then drawn together on a PDF sheet. The script needs two input paths: a path were the treelike folder structure starts (line 53) and a path that specifies the folder, where all the boxplots, timeseries and spreadsheets are saved (line 226). The pdf-sheet creating was done with the reportlab package.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+If you want to adjust this script, it's important to note that the boxplots and timeseries input are lists. The x-axis labeling of the timeseries was typed in manually (format: timestamp), since otherwise minor shifts would have occured in leap years. This process could certainly be improved. But the labeling of the y-axis sould be dynamic for boxplots and timeseries. Still, check the labeling if you adjust this script.
