@@ -53,7 +53,9 @@ If you want to adjust this script, it's important to note that the boxplots and 
 
 See: sediment_input_overview.pdf
 
+## thanks
 
+This project wouldn't have been possible for me without the support of many commited researchers/instructors: My thanks goes to Dr. Andreas Zischg (University of Bern), Dr. Jorge Ramirez (University of Bern) and Dr. Pascal Horton (University of Bern) for supervising me during the geodata analysis & modelling seminar. I also thank the supervisors of my master thesis Dr. Volker Prasuhn, Dr. Andreas Heinimann and Dr. Hanspeter Liniger. A special thank goes to my collegue Jan Liechti who's input was always very enlightening :)
 
 
 
