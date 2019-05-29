@@ -25,11 +25,11 @@ The first script is called make_db_structure_SE.py, the second copy_management_S
 
 *script 1: make_db_structure_SE.py*
 
-This script creates for each region-period object like Frienisberg 1997-2007 a treelike folder structure, where the sediment input can be copied to afterwards (the treelike folder structure is shown at the begining of script 1). It needs several input paths (line 51-66): path where the treelike folder structure starts, path where the vector files are stored, path were the raster files are stored, path of a helping script (that aids to extract information out of attribute tables).
+This script creates for each region-period object like Frienisberg 1997-2007 a treelike folder structure, where the sediment input can be copied to afterwards (the treelike folder structure is shown at the begining of script 1). It needs several input paths (line 51-66): path where the treelike folder structure starts (the subfolders "Frienisberg", "Lobsigen", "Seedorf", "Schwanden" and "Suberg" already existed!!!), path where the vector files are stored, path were the raster files are stored, path of a helping script (that aids to extract information out of attribute tables).
 
 Once the input paths are specified, you can run the script without further editing anything if you have the same vector and raster data as I used. If you want to adjust this script to other data, it's important to note that the naming convention of the input vectors and rasters is crucial. E.g. the FEKRE01_M1_037_SE.shp vector file has a corresponding sediment input raster called FEKRE01_M1_037_SE.tif. Also the naming of the vector attribute table, in my case e.g. "Datum" or "Parzelle", is crucial as well as it's format. E.g. the date in the attribute table column "Datum" was sometimes recorded as string and sometimes as timestamp. 
 
-Special attention sould be paid to the following: At the end of the script, one additional "strange folder" was created (probably a temporary storage file...) which is deleted at the very end of the script. In line 59 poped up an exclamation make (import of the aiding script) - igonre this exclamation mark!
+Special attention sould be paid to the following: In the folder where the treefolder structure starts, you have to first manually create subfolders with the name of the region , e.g. the subfolder "Seedorf" (-> do this for each region)!!! At the end of the script, one additional "strange folder" was created (probably a temporary storage file...) which is deleted at the very end of the script. In line 59 poped up an exclamation make (import of the aiding script) - igonre this exclamation mark!
 
 
 *script 2: copy_management_SE.py*
