@@ -18,8 +18,8 @@ The programming was done with Python 3.6 in the IDE PyCharm 2018.2.5 Community E
 
 ## workflow
 
-The workflow of this project consists of four scripts and is the same for sediment & phosphorus input. Therefore the workflow is only explained for the sediment input. 
-(remark for the lecturer: Only the sediment input scripts are commented comprehensibly. Therefore, please only grade the scripts for the sediment input (for phosphorus input, the script that sould check strange rasters wasn't implemented, because the check was done manually))
+The workflow of this project consists of four scripts and is the same for sediment & phosphorus input. Therefore the workflow is only explained for the sediment input. The resulting PDF's are available for both sediment and phosphorus input.
+(remark for the lecturer: Only the sediment input scripts are commented comprehensibly. Therefore, only these scripts were loaded up on Github)
 
 The first script is called make_db_structure_SE.py, the second copy_management_SE.py, the third check_strange_rasters.py and the fourth and last one create_pdf_spreadsheet_SE.py. (for phosphorus input check the corresponding _PE.py scripts). 
 
@@ -57,7 +57,7 @@ If you want to adjust this script, it's important to note that the boxplots and 
 
 ## results
 
-See: sediment_input_overview.pdf
+See: sediment_input_overview.pdf, phosphorus_input_overview.pdf
 
 ## thanks
 
