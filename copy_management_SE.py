@@ -47,22 +47,22 @@ import sys
 #########################################################################################################################
 #insert your input paths here:
 
-# this is the folder, where the database treelike structure is bulit in
+# where did you save the folder on your device, where the treelike folder structure starts?
 #(in this Folder the subfolders "Frienisberg", "Lobsigen", "Schwanden", "Seedorf", "Suberg" already existed)
 Gebiete = r"E:\David_Remund_Masterarbeit\alle_GE_MA\Gewässereintrag\Sedimenteintrag"
 
-#get list of origin_folder paths (e.g. Frienisberg_97_07_GE where all the sediment input rasters are)
+#Where did you store your raster data on your device?
 sed_inp_dir = r"E:\David_Remund_Masterarbeit\alle_GE_MA\output_GE"
 
 
-#directory where mean sediment input rasters are, e.g. Frienisberg_07_17_SE.tif
+#where did you store your mean sediment input rasters on your device?
 sed_mean_dir = r"E:\David_Remund_Masterarbeit\alle_GE_MA\mean_sediment_input"
 
-#script for converting GIS attribute table to pandas dataframe
+#where did you store the helping script "build_df_from_arcpy_181119" on your device?
 sys.path.insert(0, r'E:\David_Remund_Masterarbeit\alle_GE_MA\scripts_for_GE\geodata_analysis\Hilfsskripts')
 import build_df_from_arcpy_181119 #ignore that python marks that line red!!!
 
-#folder that was created through the script "copy_SE_vectors.py" -> for more information, read documentation of copy_SE_vectors.py
+#where did you store the vector data on your device?
 SE_vec_copied = r"E:\David_Remund_Masterarbeit\alle_GE_MA\SE_vectors_copied"
 ###########################################################################################################################
 
