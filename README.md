@@ -47,7 +47,7 @@ Special attention sould be paid to the following: Like in script 1, ignore the e
 *script 3: check_strange_rasters.py*
 
 This script checks if some strange raster (they always begin with "numpyarraytorater...") were produced during the copying process. If so, it deletes them and prints the name of the raster that has been deleted. This script only needs one input path: the path where the treelike folder structure starts.
-Special attention: E.g. that the test data could be processed with the "check_strange_rasters.py" script, I had to add the lines 317-319 and 380-382 (script 3 in the test_data_folder), because in Seedorf_2007_2017 occured no flaechenhaft erosion.
+Special attention: Not every region-period object might have rasters in each folder branch, e.g. in Seedorf_2007_2017 there's no areal  (flaechenhaft) erosion. Therefore the "check_strange_rasters.py" might have to be adjusted. In this case the paths .../Seedorf_2007_2017/Erosionsform/flaechenhaft/Einzel and .../Seedorf_2007_2017/Erosionsform/flaechenhaft/Summe must be deleted out of the date_einzel_list (in approximately lines 320 and 380).
 
 *script 4: create_pdf_spreadsheet_SE.py*
 
