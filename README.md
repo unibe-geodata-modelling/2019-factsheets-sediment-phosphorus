@@ -1,5 +1,6 @@
 # 2019-automated factsheets for sediment (& phosphorus input) into waterbodies
 ## (based on a 20 year long soil erosion database in the region of Frienisberg, Switzerland)
+If you are interested in the scientific setting of this coding project as well as some first interpretation of the results, then have a look at "project_automated_factsheets_David_Remund.pdf".
 
 Author: David Remund 13-104-591, University of Berne, Seminar Geodata analysis and modelling (Springsemester 2019)
 
